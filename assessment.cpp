@@ -109,4 +109,29 @@ private:
       break;
     }
   }
+
+  void moveBackward()
+  {
+    switch (direction)
+    {
+    case N:
+      coordinates.y--;
+      break;
+    case S:
+      coordinates.y++;
+      break;
+    case E:
+      coordinates.x--;
+      break;
+    case W:
+      coordinates.x++;
+      break;
+    case Up:
+      coordinates.z--;
+      break;
+    case Down:
+      coordinates.z++;
+      break;
+    }
+  }
 };
