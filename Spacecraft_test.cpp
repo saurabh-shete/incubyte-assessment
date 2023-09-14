@@ -70,6 +70,21 @@ void testTurnLeft()
   }
 }
 
+void testTurnRight()
+{
+  Spacecraft spacecraft(0, 0, 0, Direction::N);
+  spacecraft.move('r');
+
+  if (spacecraft.getDirection() == Direction::E)
+  {
+    std::cout << "Turn Right Test: Passed\n";
+  }
+  else
+  {
+    std::cout << "Turn Right Test: Failed\n";
+  }
+}
+
 int main()
 {
 
@@ -77,6 +92,6 @@ int main()
   testMoveForward();
   testMoveBackward();
   testTurnLeft();
-
+  testTurnRight();
   return 0;
 }
