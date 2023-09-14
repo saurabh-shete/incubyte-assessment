@@ -134,4 +134,46 @@ private:
       break;
     }
   }
+
+  void turnLeft()
+  {
+    if (direction == Up || direction == Down)
+      direction = prevDirection;
+    switch (direction)
+    {
+    case N:
+      direction = W;
+      break;
+    case S:
+      direction = E;
+      break;
+    case E:
+      direction = N;
+      break;
+    case W:
+      direction = S;
+      break;
+    }
+  }
+
+  void turnRight()
+  {
+    if (direction == Up || direction == Down)
+      direction = prevDirection;
+    switch (direction)
+    {
+    case N:
+      direction = E;
+      break;
+    case S:
+      direction = W;
+      break;
+    case E:
+      direction = S;
+      break;
+    case W:
+      direction = N;
+      break;
+    }
+  }
 };
