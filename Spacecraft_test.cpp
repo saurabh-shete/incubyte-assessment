@@ -85,6 +85,36 @@ void testTurnRight()
   }
 }
 
+void testTurnUp()
+{
+  Spacecraft spacecraft(0, 0, 0, Direction::N);
+  spacecraft.move('u');
+
+  if (spacecraft.getDirection() == Direction::Up)
+  {
+    std::cout << "Turn Up Test: Passed\n";
+  }
+  else
+  {
+    std::cout << "Turn Up Test: Failed\n";
+  }
+}
+
+void testTurnDown()
+{
+  Spacecraft spacecraft(0, 0, 0, Direction::N);
+  spacecraft.move('d');
+
+  if (spacecraft.getDirection() == Direction::Down)
+  {
+    std::cout << "Turn Down Test: Passed\n";
+  }
+  else
+  {
+    std::cout << "Turn Down Test: Failed\n";
+  }
+}
+
 int main()
 {
 
@@ -93,5 +123,7 @@ int main()
   testMoveBackward();
   testTurnLeft();
   testTurnRight();
+  testTurnUp();
+  testTurnDown();
   return 0;
 }
