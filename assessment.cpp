@@ -176,4 +176,44 @@ private:
       break;
     }
   }
+
+  void turnUp()
+  {
+    prevDirection = direction;
+    direction = Up;
+    countUpDown++;
+    if (abs(countUpDown) == 0)
+      return;
+    if (abs(countUpDown) % 2 == 0)
+    {
+      if (direction == N)
+        direction = S;
+      else if (direction == S)
+        direction == N;
+      else if (direction == E)
+        direction == W;
+      else if (direction == W)
+        direction == E;
+    }
+  }
+
+  void turnDown()
+  {
+    prevDirection = direction;
+    direction = Down;
+    countUpDown--;
+    if (abs(countUpDown) == 0)
+      return;
+    if (abs(countUpDown) % 2 == 0)
+    {
+      if (direction == N)
+        direction = S;
+      else if (direction == S)
+        direction == N;
+      else if (direction == E)
+        direction == W;
+      else if (direction == W)
+        direction == E;
+    }
+  }
 };
